@@ -10,6 +10,7 @@ module.exports = {
     ],
     outputServer: {
         port: 3100,
+        open: false
     },
     readlineCommands: {
         1: [0],
