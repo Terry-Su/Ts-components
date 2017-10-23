@@ -1,18 +1,15 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-class App extends React.Component {
-    render() {
-        return (
-            <div>
-                123
-            </div>
-        )
-    }
-}
+import App from '../component/App'
+
+import style from '../style/index.styl'
+
+
 
 const Controller = {
     init() {
+        console.log(style)
         render(
             <App />,
             document.getElementById('app')
