@@ -185,7 +185,7 @@ export default class Element extends Component {
                 onMouseDown={this.onDragStart}
                 onTouchStart={this.onDragStart}
             >
-
+                
             </div>
         )
     }
