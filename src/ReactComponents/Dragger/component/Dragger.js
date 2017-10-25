@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
-import * as DraggerFiber from 'DraggerFiber'
+import * as DraggerFiber from '../draggerFiber/index'
+import * as Util from '../util/index'
 
 export default class Element extends Component {
     constructor(props) {

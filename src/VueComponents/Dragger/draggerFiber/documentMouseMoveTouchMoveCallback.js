@@ -1,3 +1,5 @@
+import * as Fp from '../Fp/index'
+
 export function documentMouseMoveTouchMoveCallback(e) {
     e.preventDefault()
 

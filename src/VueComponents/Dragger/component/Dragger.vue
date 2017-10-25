@@ -5,7 +5,8 @@
 </template>
 
 <script>
-import * as DraggerFiber from 'DraggerFiber'
+import * as DraggerFiber from '../draggerFiber/index'
+import * as Util from '../util/index'
 
 export default {
   name: "App",

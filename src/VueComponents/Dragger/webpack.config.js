@@ -10,15 +10,15 @@ module.exports = Object.assign(
     {
         resolve: {
             alias: {
-                Util: PATH.resolve(__dirname, './util'),
-                DraggerFiber: PATH.resolve(__dirname, './draggerFiber/index'),
-                'src':  PATH.resolve(__dirname, '../../'),
+                // Util: PATH.resolve(__dirname, './util'),
+                // DraggerFiber: PATH.resolve(__dirname, './draggerFiber/index'),
+                // 'src':  PATH.resolve(__dirname, '../../'),
             }
         },
         plugins: [
             new webpack.ProvidePlugin({
-                Util: 'Util',
-                Fp: PATH.resolve(__dirname, './fp/index')
+                // Util: 'Util',
+                // Fp: PATH.resolve(__dirname, './fp/index')
             })
         ],
     }

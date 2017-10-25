@@ -1,3 +1,6 @@
+import * as Util from '../util/index'
+
+
 export function bindDocumentEvents() {
     const bindDocumentMouseMoveOnce = Util.createImplementOnceMethod(Util.bindDocumentMouseMove)
     const bindDocumentTouchMoveOnce = Util.createImplementOnceMethod(Util.bindDocumentTouchMove)

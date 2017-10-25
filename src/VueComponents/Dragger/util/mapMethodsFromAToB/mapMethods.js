@@ -1,5 +1,5 @@
 export default function (obj, keys) {
-    let clonedObj = { ...obj }
+    let clonedObj = Object.assign({}, obj)
 
     const originKeys = Object.keys(clonedObj)
     const targetKeys = keys
