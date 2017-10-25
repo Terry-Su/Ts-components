@@ -1,9 +1,9 @@
-const basicModule = require('./basicModule')
+const basicVueModule = require('./basicVueModule')
 const devtool = require('./devtool')
 
 
 module.exports = Object.assign(
     {},
-    basicModule,
+    basicVueModule,
     devtool
 )

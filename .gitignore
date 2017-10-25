@@ -1,6 +1,8 @@
 # bundle.js
 bundle.js
 
+# .map
+*.map
 
 # Logs
 logs

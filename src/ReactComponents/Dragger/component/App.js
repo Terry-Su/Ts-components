@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
 
-import RestrictContainer from './RestrictContainer'
-import Dragger from './Dragger'
+import Test from './__test/Test'
 
 export default class App extends Component {
     render() {
         return (
             <div className="App">
-                <Dragger>
-                    
-                </Dragger>
+                {<Test />}
             </div>
         )
     }

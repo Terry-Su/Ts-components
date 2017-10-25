@@ -4,7 +4,12 @@ const decache = require('decache')
 
 module.exports = {
     getBasicWebpackConfig() {
-        const webpackPath = PATH.resolve(__dirname, '../webpackConfig/webpack.base.config')
+        const webpackPath = PATH.resolve(__dirname, '../webpackConfig/webpack.react.config')
+        decache(webpackPath)
+        return require(webpackPath)
+    },
+    getWebpackConfigByDirname(dirname) {
+        const webpackPath = PATH.resolve(dirname, './webpack.config.js')
         decache(webpackPath)
         return require(webpackPath)
     },
@@ -13,5 +18,5 @@ module.exports = {
         return {
             content: FS.readFileSync(htmlPath, {encoding: 'utf8'})
         }
-    }
+    },
 }

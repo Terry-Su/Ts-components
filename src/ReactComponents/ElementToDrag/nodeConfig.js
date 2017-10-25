@@ -1,11 +1,11 @@
-const Share = require('../__share/nodeConfig/index')
+const RootShare = require('../../__share/nodeConfig/index')
 
 
 module.exports = {
     getWebpack() {
-       return Share.getBasicWebpackConfig()
+       return RootShare.getBasicWebpackConfig()
     },
     getHtml() {
-        return Share.getBasicHtml()
+        return RootShare.getBasicHtml()
     }
 }
