@@ -22,11 +22,8 @@ export function documentMouseMoveTouchMoveCallback(e) {
             clientX,
             offsetY,
             clientY,
-            getParentElement,
-            shouldRestrictParentElement,
         } = this
 
-        const elementParentElement = getParentElement()
         const isMoved = possibleClientX !== prevMouseMoveClientX || possibleClientY !== prevMouseMoveClientY
         const isDragging = isMoved
 
@@ -35,7 +32,8 @@ export function documentMouseMoveTouchMoveCallback(e) {
             let y
             const {
                 shouldRestrictParentElement,
-                thisGetRestrictElement,
+                getRestrictElement: thisGetRestrictElement,
+                getParentElement,
             } = this
 
             x = clientX - this.getParentElementLeft() - offsetX
@@ -47,8 +45,7 @@ export function documentMouseMoveTouchMoveCallback(e) {
             const shouldRestrict = shouldRestrictParentElement || thisGetRestrictElement
 
             if (shouldRestrict) {
-                const getParentRestrictElement = () => this.$parent.$el
-                const getRestrictElement = shouldRestrictParentElement ? getParentRestrictElement : thisGetRestrictElement
+                const getRestrictElement = shouldRestrictParentElement ? getParentElement : thisGetRestrictElement
 
                 const restrictedX = Fp.restrictX(x, width, getRestrictElement)
                 const restrictedY = Fp.restrictY(y, height, getRestrictElement)

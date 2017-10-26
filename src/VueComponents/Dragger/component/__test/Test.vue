@@ -11,7 +11,17 @@
         <br />
 
         <TestParentRestrictor>
-          <Dragger :shouldRestrictParentElement="true" :getRestrictElement="getRestrictElement">
+          <Dragger :shouldRestrictParentElement="true" >
+            <TestChild />
+          </Dragger>
+        </TestParentRestrictor>
+
+        <br />
+        <br />
+        <br />
+
+        <TestParentRestrictor>
+          <Dragger :getRestrictElement="getRestrictElement" >
             <TestChild />
           </Dragger>
         </TestParentRestrictor>

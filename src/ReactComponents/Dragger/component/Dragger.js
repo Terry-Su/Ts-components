@@ -7,6 +7,13 @@ export default class Element extends Component {
     constructor(props) {
         super(props)
 
+        /****** props ******/
+        /*
+         * props.shouldRestrictParentElement
+         * props.getRestrictElement
+         */
+        /****** props ******/
+
         this.state = {
             x: null,
             y: null,

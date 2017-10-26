@@ -15,42 +15,38 @@ export default class Test extends Component {
         return this.testParentRestrictorDom
     }
     render() {
-        const shouldShowCatalog = [
-            'normal',
-            'restrictor'
-        ]
-        const include = (num) => shouldShowCatalog.includes(num)
-
         return (
             <div className="Test" onClick={this.onClick}>
-                {
-                    include('normal')
-                        ?
-                        <TestParent>
-                            <Dragger>
-                                <TestChild />
-                            </Dragger>
-                        </TestParent>
-                        :
-                        null
-                }
+                <TestParent>
+                    <Dragger>
+                        <TestChild />
+                    </Dragger>
+                </TestParent>
+
                 <br />
                 <br />
                 <br />
-                {
-                    include('restrictor')
-                        ?
-                        <TestParentRestrictor divRef={el => { this.testParentRestrictorDom = el }}>
-                            <Dragger
-                                shouldRestrictParentElement={true}
-                                getRestrictElement={this.getTestParentRestrictorDom}
-                            >
-                                <TestChild />
-                            </Dragger>
-                        </TestParentRestrictor>
-                        :
-                        null
-                }
+
+                <TestParentRestrictor divRef={el => { this.testParentRestrictorDom = el }}>
+                    <Dragger
+                        shouldRestrictParentElement={true}
+                    >
+                        <TestChild />
+                    </Dragger>
+                </TestParentRestrictor>
+
+                <br />
+                <br />
+                <br />
+
+                <TestParentRestrictor divRef={el => { this.testParentRestrictorDom = el }}>
+                    <Dragger
+                        shouldRestrictParentElement={true}
+                        getRestrictElement={this.getTestParentRestrictorDom}
+                    >
+                        <TestChild />
+                    </Dragger>
+                </TestParentRestrictor>
             </div>
         )
     }
