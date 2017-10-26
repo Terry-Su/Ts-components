@@ -13,7 +13,7 @@ module.exports = {
         open: false
     },
     readlineCommands: {
-        1: [1],
-        2: [1],
+        // 1: [1],
+        2: [1, 2],  
     },
 }
