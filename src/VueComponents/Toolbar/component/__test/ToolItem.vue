@@ -4,7 +4,8 @@
         width: '43px',
         height: '40px',
         marginTop: '8px',
-    }">
+    }"
+    @click.native="clickProxy">
         <Item :icon="icon" />
     </ToolbarTool>
 </template>
@@ -19,7 +20,12 @@ export default {
     ToolbarTool,
     Item
   },
-  props: ["icon"],
+  props: ["icon", 'click'],
+  methods: {
+      clickProxy(e) {
+          this.click && this.click(e, this)
+      }
+  }
 };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
     <ToolbarTool :style="{
           float: 'left',
-          width: '500px',
+          width: '100%',
           height: '32px',
           marginTop: '12px',
       }">

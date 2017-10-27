@@ -9,10 +9,10 @@
           cursor: 'pointer',
       }"
     >
-      <i class="iconfont" :style="{
+      <i :class="'iconfont ' + icon || ''" :style="{
         fontSize: '20px',
         color: 'white',
-      }" v-html="icon"></i>
+      }"></i>
     </div>
 </template>
 
