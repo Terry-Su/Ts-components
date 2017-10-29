@@ -9,6 +9,12 @@
         <br />
         <br />
         <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
         <TestParentRestrictor>
           <Dragger :shouldRestrictParentElement="true" >
@@ -16,6 +22,12 @@
           </Dragger>
         </TestParentRestrictor>
 
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <br />
         <br />
         <br />

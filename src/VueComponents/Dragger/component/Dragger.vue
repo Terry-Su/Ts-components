@@ -1,19 +1,10 @@
-<template>
-    <div @mousedown="this.onDragStart" @touchstart="this.onDragStart" :style="style">
-      <slot></slot>
-    </div>
-</template>
-
 <script>
-import * as DraggerFiber from '../draggerFiber/index'
-import * as Util from '../util/index'
+import * as DraggerFiber from "../draggerFiber/index";
+import * as Util from "../util/index";
 
 export default {
   name: "App",
-  props: [
-    'getRestrictElement',
-    'shouldRestrictParentElement',
-  ],
+  props: ["getRestrictElement", "shouldRestrictParentElement"],
   data() {
     return {
       x: null,
@@ -40,10 +31,10 @@ export default {
   computed: {
     style() {
       return {
-        position: 'absolute',
-        left: this.x + 'px',
-        top: this.y + 'px',
-      }
+        position: "absolute",
+        left: this.x + "px",
+        top: this.y + "px"
+      };
     }
   },
   beforeCreate() {
@@ -60,11 +51,11 @@ export default {
       "getParentElementTop",
       "onDragStart",
       "updateProp"
-    ]);    
+    ]);
   },
   mounted() {
-    this.updateProp('element', this.$el)
-    
+    this.updateProp("element", this.$el);
+
     const { element, getParentElement } = this;
 
     const elementParentElement = getParentElement();
@@ -82,9 +73,21 @@ export default {
 
     this.bindDocumentEvents();
   },
+  render(h) {
+    return (
+      <div
+        onMousedown={this.onDragStart}
+        onTouchstart={this.onDragStart}
+        style={this.style}
+      >
+        { this.$slots.default }
+      </div>
+    );
+  }
 };
 </script>
 
 <style>
 
 </style>
+  

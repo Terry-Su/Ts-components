@@ -14,6 +14,6 @@ module.exports = {
     },
     readlineCommands: {
         // 1: [1],
-        2: [0],  
+        2: [2],  
     },
 }

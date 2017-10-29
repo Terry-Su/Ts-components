@@ -12,10 +12,10 @@ export default {
   data() {
     return {
       style: {
-        width: "100px",
-        height: "80px",
+        width: "1000px",
+        height: "320px",
         color: "blue",
-        background: "orange"
+        background: "rgba(4,3,5,0.5)"
       }
     };
   }

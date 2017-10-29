@@ -1,9 +1,28 @@
-export function restrictY(theY = 0, height, restrictElement) {
-    let y = theY
+const isDraggingElemntHigerThanRestrictElement = (draggingElementHeight, restrictElementHeight) => {
+    debugger
+    return draggingElementHeight > restrictElementHeight
+}
 
-    if (restrictElement()) {
-        const boundTop = 0
-        const boundBottom = restrictElement().getBoundingClientRect().height
+
+
+export function restrictY(theY = 0, height, getRestrictElement) {
+    let y = theY
+    const restrictElement = getRestrictElement()
+
+    if (restrictElement) {
+        let boundTop
+        let boundBottom
+        const restrictElementHeight = restrictElement.getBoundingClientRect().height
+        
+        if (isDraggingElemntHigerThanRestrictElement(height, restrictElementHeight)) {
+            boundTop = -1 * (height - restrictElementHeight)
+            boundBottom = height
+        }
+
+        if (!isDraggingElemntHigerThanRestrictElement(height, restrictElementHeight)) {
+            boundTop = 0
+            boundBottom = restrictElementHeight
+        }
 
         y = y < boundTop ? boundTop : y
         y = y + height > boundBottom ? boundBottom - height : y
