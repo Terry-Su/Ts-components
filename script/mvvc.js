@@ -1,6 +1,6 @@
 const PATH = require('path')
-const mvvc = require('../../MVVC/index.js')
+const mvvc = require('../../MP/index.js')
 
 mvvc.init({
-    mvvcConfigPath: PATH.resolve(__dirname, '../src/mvvc.config.js')
+    mpConfigPath: PATH.resolve(__dirname, '../src/mvvc.config.js')
 })

@@ -25,7 +25,7 @@ export default {
         height: this.getToolbarHeight() + "px",
         lineHeight: this.getToolbarHeight() + "px",
         // background: "orange",
-      };
+      };  
     },
     getParentComponent() {
       return this.$parent;
