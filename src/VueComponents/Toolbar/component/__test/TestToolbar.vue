@@ -89,7 +89,6 @@ export default {
               >
                 <div
                   style={{
-                    width: 'auto',
                     // display: "inline-block",
                     height: "100%",
                     whiteSpace: "nowrap"
