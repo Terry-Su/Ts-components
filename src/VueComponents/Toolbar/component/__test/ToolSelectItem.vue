@@ -42,6 +42,8 @@ export default {
   },
   methods: {
     click() {
+      this.updateStyleLeftOfDropListOfSelect();
+      this.updateStyleTopOfDropListOfSelect();
       this.shouldShowDropList = !this.shouldShowDropList;
     },
 

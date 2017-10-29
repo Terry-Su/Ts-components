@@ -1,11 +1,11 @@
 <script>
 import Toolbar from "../Toolbar.vue";
-import ToolbarDragger from "../ToolbarDragger.vue";
 import ToolSearchBar from "./ToolSearchBar.vue";
 import ToolItem from "./ToolItem.vue";
 import ToolSelectItem from "./ToolSelectItem.vue";
 import ToolSeperator from "./ToolSeperator.vue";
 import FloatLeftMarginRight from "./FloatLeftMarginRight.vue";
+import Dragger from "../../../Dragger/component/Dragger.vue";
 
 const Flmr24 = {
   render(h) {
@@ -28,7 +28,10 @@ export default {
 
     /* layout */
     FloatLeftMarginRight,
-    Flmr24
+    Flmr24,
+
+    /* interact */
+    Dragger
   },
   data() {
     return {
@@ -78,11 +81,20 @@ export default {
                 overflow: "hidden"
               }}
             >
-              <ToolbarDragger>
-                <div style={{
-                  width: '1200px',
-                  height: '100%',
-                }}>
+              <Dragger
+                style={{
+                  height: "100%"
+                }}
+                shouldRestrictParentElement
+              >
+                <div
+                  style={{
+                    width: 'auto',
+                    // display: "inline-block",
+                    height: "100%",
+                    whiteSpace: "nowrap"
+                  }}
+                >
                   <FloatLeftMarginRight value={95} />
                   <Flmr24>
                     <ToolSelectItem icon="icon-Choice" />
@@ -130,7 +142,7 @@ export default {
                     <ToolItem icon="icon-clear" />
                   </Flmr24>
                 </div>
-              </ToolbarDragger>
+              </Dragger>
             </div>
           </Toolbar>
         </div>

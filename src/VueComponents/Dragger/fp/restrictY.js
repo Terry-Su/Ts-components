@@ -1,5 +1,4 @@
 const isDraggingElemntHigerThanRestrictElement = (draggingElementHeight, restrictElementHeight) => {
-    debugger
     return draggingElementHeight > restrictElementHeight
 }
 

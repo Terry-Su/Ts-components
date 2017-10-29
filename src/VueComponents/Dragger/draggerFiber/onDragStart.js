@@ -7,8 +7,8 @@ export function onDragStart(e) {
         parentElementTop,
     } = this
 
-    const clientX = e.x !== undefined ? e.x : e.nativeEvent.touches[0].clientX
-    const clientY = e.y !== undefined ? e.y : e.nativeEvent.touches[0].clientY
+    const clientX = e.x !== undefined ? e.x : e.touches[0].clientX
+    const clientY = e.y !== undefined ? e.y : e.touches[0].clientY
 
     this.updateProp('offsetX', clientX - this.getElementLeft())
     this.updateProp('offsetY', clientY - this.getElementTop())

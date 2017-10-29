@@ -1,7 +1,9 @@
 <template>
     <div :style="{
-        float: 'left',
+        //float: 'left',
+        display: 'inline-block',
         height: '100%',
+        whiteSpace: 'normal',
         marginRight: value ? value + 'px' : '0px'
     }">
         <slot />
