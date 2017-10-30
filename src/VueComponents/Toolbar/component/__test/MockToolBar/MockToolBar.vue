@@ -1,11 +1,11 @@
 <script>
-import Toolbar from "../Toolbar.vue";
+import Toolbar from "../../Toolbar.vue";
 import ToolSearchBar from "./ToolSearchBar.vue";
 import ToolIconItem from "./ToolIconItem.vue";
 import ToolSelectItem from "./ToolSelectItem.vue";
 import ToolSeperator from "./ToolSeperator.vue";
 import ToolButtonItem from "./ToolButtonItem.vue";
-import Dragger from "../../../Dragger/component/Dragger.vue";
+import Dragger from "../../../../Dragger/component/Dragger.vue";
 
 const ToolItemWrapper = {
   name: "ToolItemWrapper",
@@ -91,12 +91,14 @@ export default {
                 height: "100%",
                 marginLeft: `${-(80 + 26)}px`,
                 marginRight: `${26}px`,
-                fontSize: '10px',
+                fontSize: "10px"
               }}
             >
-              <ToolButtonItem style={{
-                marginLeft: '26px'
-              }}>
+              <ToolButtonItem
+                style={{
+                  marginLeft: "26px"
+                }}
+              >
                 Export
               </ToolButtonItem>
             </div>
@@ -114,61 +116,78 @@ export default {
             >
               <Dragger
                 style={{
+                  minWidth: "100%",
                   height: "100%"
                 }}
                 shouldRestrictParentElement
               >
                 <div
                   style={{
+                    minWidth: "100%",
                     height: "100%",
                     whiteSpace: "nowrap"
                   }}
                 >
                   <ToolItemWrapper>
-                    <ToolSelectItem icon="icon-Choice" />
+                    <ToolSelectItem icon="icon-Choice"/>
                   </ToolItemWrapper>
+
                   <ToolItemWrapper>
                     <ToolIconItem icon="icon-Selectinverse" />
                   </ToolItemWrapper>
+
                   <ToolItemWrapper>
                     <ToolSeperator />
                   </ToolItemWrapper>
+
                   <ToolItemWrapper>
                     <ToolIconItem icon="icon-home" />
                   </ToolItemWrapper>
+
                   <ToolItemWrapper>
                     <ToolIconItem icon="icon-distance" />
                   </ToolItemWrapper>
+
                   <ToolItemWrapper>
                     <ToolIconItem icon="icon-area" />
                   </ToolItemWrapper>
+
                   <ToolItemWrapper>
                     <ToolSeperator />
                   </ToolItemWrapper>
+
                   <ToolItemWrapper>
                     <ToolIconItem icon="icon-point" />
                   </ToolItemWrapper>
+
                   <ToolItemWrapper>
                     <ToolIconItem icon="icon-line" />
                   </ToolItemWrapper>
+
                   <ToolItemWrapper>
                     <ToolIconItem icon="icon-Straightarrow" />
                   </ToolItemWrapper>
+
                   <ToolItemWrapper>
                     <ToolIconItem icon="icon-rectangle" />
                   </ToolItemWrapper>
+
                   <ToolItemWrapper>
                     <ToolIconItem icon="icon-polygon" />
                   </ToolItemWrapper>
+
                   <ToolItemWrapper>
                     <ToolIconItem icon="icon-circle" />
                   </ToolItemWrapper>
+
                   <ToolItemWrapper>
                     <ToolIconItem icon="icon-text" />
                   </ToolItemWrapper>
+
                   <ToolItemWrapper>
                     <ToolIconItem icon="icon-clear" />
                   </ToolItemWrapper>
+
                 </div>
               </Dragger>
             </div>

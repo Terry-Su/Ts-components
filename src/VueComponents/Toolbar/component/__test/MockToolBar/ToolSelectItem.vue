@@ -2,7 +2,7 @@
     <ToolbarTool :style="{
       height: '100%',
     }">
-      <ToolIconItem @click.native="click" :icon="icon" ref='item' />
+      <ToolIconItem @click.native="clickProxy" :icon="icon" ref='item' />
       
       <div :style="{
         position: 'fixed',
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import ToolbarTool from "../ToolbarTool.vue";
+import ToolbarTool from "../../ToolbarTool.vue";
 import ToolIconItem from "./ToolIconItem.vue";
 import DropListOfSelect from "./DropListOfSelect/index.vue";
 
@@ -27,7 +27,7 @@ export default {
     DropListOfSelect,
     ToolbarTool
   },
-  props: ["icon"],
+  props: ["icon", 'click'],
   data() {
     return {
       shouldShowDropList: false,
@@ -40,10 +40,12 @@ export default {
     };
   },
   methods: {
-    click() {
+    clickProxy(e) {
       this.updateStyleLeftOfDropListOfSelect();
       this.updateStyleTopOfDropListOfSelect();
       this.shouldShowDropList = !this.shouldShowDropList;
+      
+      this.click && this.click(e, this)
     },
 
     DropListOfSelectClickProxy(e, instance) {

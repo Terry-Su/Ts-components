@@ -1,15 +1,15 @@
 <template>
-    <TestToolbar />
+    <MockToolBar />
 </template>
 
 <script>
-import TestToolbar from './TestToolbar.vue'
+import MockToolBar from './MockToolBar/MockToolBar.vue'
 
 
 export default {
     name: 'Test',
     components: {
-        TestToolbar
+        MockToolBar
     }
 }
 </script>

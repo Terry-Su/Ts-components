@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import ToolbarTool from "../ToolbarTool.vue";
+import ToolbarTool from "../../ToolbarTool.vue";
 import SearchBar from "./SearchBar.vue";
 
 export default {

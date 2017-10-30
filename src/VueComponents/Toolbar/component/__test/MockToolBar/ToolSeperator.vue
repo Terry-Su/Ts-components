@@ -10,7 +10,7 @@
 
 <script>
 import Seperator from "./Seperator.vue";
-import ToolbarTool from "../ToolbarTool.vue";
+import ToolbarTool from "../../ToolbarTool.vue";
 
 export default {
   name: "ToolSeperator",

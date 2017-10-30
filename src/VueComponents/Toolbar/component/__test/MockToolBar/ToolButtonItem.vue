@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import ToolbarTool from "../ToolbarTool.vue";
+import ToolbarTool from "../../ToolbarTool.vue";
 import ButtonItem from "./ButtonItem.vue";
 
 export default {
