@@ -1,6 +1,6 @@
 <template>
     <div 
-      class="Item" 
+      class="IconItem" 
       :style="{
           width: '100%',
           height: '100%',
@@ -18,14 +18,14 @@
 
 <script>
 export default {
-  name: "Item",
+  name: "IconItem",
   props: ["icon"],
   methods: {}
 };
 </script>
 
 <style scoped>
-.Item:hover {
+.IconItem:hover {
   background: #1199d3;
 }
 </style>

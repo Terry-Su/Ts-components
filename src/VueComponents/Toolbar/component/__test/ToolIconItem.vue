@@ -1,24 +1,23 @@
 <template>
     <ToolbarTool :style="{
-        float: 'left',
         width: '43px',
         height: '40px',
         marginTop: '8px',
     }"
     @click.native="clickProxy">
-        <Item :icon="icon" />
+        <IconItem :icon="icon" />
     </ToolbarTool>
 </template>
 
 <script>
 import ToolbarTool from "../ToolbarTool.vue";
-import Item from "./Item.vue";
+import IconItem from "./IconItem.vue";
 
 export default {
-  name: "ToolItem",
+  name: "ToolIconItem",
   components: {
     ToolbarTool,
-    Item
+    IconItem
   },
   props: ["icon", 'click'],
   methods: {

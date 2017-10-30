@@ -1,9 +1,8 @@
 <template>
     <ToolbarTool :style="{
-      float: 'left',
       height: '100%',
     }">
-      <ToolItem @click.native="click" :icon="icon" ref='item' />
+      <ToolIconItem @click.native="click" :icon="icon" ref='item' />
       
       <div :style="{
         position: 'fixed',
@@ -18,13 +17,13 @@
 
 <script>
 import ToolbarTool from "../ToolbarTool.vue";
-import ToolItem from "./ToolItem.vue";
+import ToolIconItem from "./ToolIconItem.vue";
 import DropListOfSelect from "./DropListOfSelect/index.vue";
 
 export default {
   name: "ToolSelectItem",
   components: {
-    ToolItem,
+    ToolIconItem,
     DropListOfSelect,
     ToolbarTool
   },

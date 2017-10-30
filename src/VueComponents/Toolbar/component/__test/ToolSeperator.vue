@@ -1,6 +1,5 @@
 <template>
     <ToolbarTool :style="{
-      float: 'left',
       width: '2px',
       height: '24px',
       marginTop: '16px',

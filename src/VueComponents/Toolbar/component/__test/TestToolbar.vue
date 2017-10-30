@@ -1,18 +1,28 @@
 <script>
 import Toolbar from "../Toolbar.vue";
 import ToolSearchBar from "./ToolSearchBar.vue";
-import ToolItem from "./ToolItem.vue";
+import ToolIconItem from "./ToolIconItem.vue";
 import ToolSelectItem from "./ToolSelectItem.vue";
 import ToolSeperator from "./ToolSeperator.vue";
-import FloatLeftMarginRight from "./FloatLeftMarginRight.vue";
+import ToolButtonItem from "./ToolButtonItem.vue";
 import Dragger from "../../../Dragger/component/Dragger.vue";
 
-const Flmr24 = {
+const ToolItemWrapper = {
+  name: "ToolItemWrapper",
+  props: ["marginRight"],
   render(h) {
     return (
-      <FloatLeftMarginRight value="24">
+      <div
+        style={{
+          display: "inline-block",
+          marginRight: (this.marginRight || 24) + "px",
+          height: "100%",
+          whiteSpace: "normal",
+          verticalAlign: "top"
+        }}
+      >
         {this.$slots.default}
-      </FloatLeftMarginRight>
+      </div>
     );
   }
 };
@@ -22,13 +32,13 @@ export default {
   components: {
     Toolbar,
     ToolSearchBar,
-    ToolItem,
+    ToolIconItem,
     ToolSelectItem,
     ToolSeperator,
+    ToolButtonItem,
 
     /* layout */
-    FloatLeftMarginRight,
-    Flmr24,
+    ToolItemWrapper,
 
     /* interact */
     Dragger
@@ -52,30 +62,51 @@ export default {
           <Toolbar
             style={{
               width: "100%",
-              height: "56px",
-              lineHeight: "56px"
+              height: "56px"
             }}
           >
+            {/* Search bar */}
             <div
               style={{
                 float: "left",
-                width: "335px",
+                width: `${335 + 95}px`,
                 height: "100%",
-                marginRight: "-335px"
+                marginRight: `${-(335 + 95)}px`,
+                marginLeft: "26px"
               }}
             >
-              <FloatLeftMarginRight value={26} />
               <ToolSearchBar
                 style={{
-                  width: "309px"
+                  width: "309px",
+                  display: "inline-block"
                 }}
               />
             </div>
 
+            {/* Export button */}
+            <div
+              style={{
+                float: "right",
+                width: `${80 + 26}px`,
+                height: "100%",
+                marginLeft: `${-(80 + 26)}px`,
+                marginRight: `${26}px`,
+                fontSize: '10px',
+              }}
+            >
+              <ToolButtonItem style={{
+                marginLeft: '26px'
+              }}>
+                Export
+              </ToolButtonItem>
+            </div>
+
+            {/* icon items */}
             <div
               style={{
                 position: "relative",
-                marginLeft: "335px",
+                marginLeft: `${335 + 95 + 26}px`,
+                marginRight: `${80 + 26 + 26}px`,
                 height: "100%",
                 whiteSpace: "nowrap",
                 overflow: "hidden"
@@ -89,57 +120,55 @@ export default {
               >
                 <div
                   style={{
-                    // display: "inline-block",
                     height: "100%",
                     whiteSpace: "nowrap"
                   }}
                 >
-                  <FloatLeftMarginRight value={95} />
-                  <Flmr24>
+                  <ToolItemWrapper>
                     <ToolSelectItem icon="icon-Choice" />
-                  </Flmr24>
-                  <Flmr24>
-                    <ToolItem icon="icon-Selectinverse" />
-                  </Flmr24>
-                  <Flmr24>
+                  </ToolItemWrapper>
+                  <ToolItemWrapper>
+                    <ToolIconItem icon="icon-Selectinverse" />
+                  </ToolItemWrapper>
+                  <ToolItemWrapper>
                     <ToolSeperator />
-                  </Flmr24>
-                  <Flmr24>
-                    <ToolItem icon="icon-home" />
-                  </Flmr24>
-                  <Flmr24>
-                    <ToolItem icon="icon-distance" />
-                  </Flmr24>
-                  <Flmr24>
-                    <ToolItem icon="icon-area" />
-                  </Flmr24>
-                  <Flmr24>
+                  </ToolItemWrapper>
+                  <ToolItemWrapper>
+                    <ToolIconItem icon="icon-home" />
+                  </ToolItemWrapper>
+                  <ToolItemWrapper>
+                    <ToolIconItem icon="icon-distance" />
+                  </ToolItemWrapper>
+                  <ToolItemWrapper>
+                    <ToolIconItem icon="icon-area" />
+                  </ToolItemWrapper>
+                  <ToolItemWrapper>
                     <ToolSeperator />
-                  </Flmr24>
-                  <Flmr24>
-                    <ToolItem icon="icon-point" />
-                  </Flmr24>
-                  <Flmr24>
-                    <ToolItem icon="icon-line" />
-                  </Flmr24>
-                  <Flmr24>
-                    <ToolItem icon="icon-Straightarrow" />
-                  </Flmr24>
-                  <Flmr24>
-                    <ToolItem icon="icon-rectangle" />
-                  </Flmr24>
-                  <Flmr24>
-                    <ToolItem icon="icon-polygon" />
-                  </Flmr24>
-                  <Flmr24>
-                    <ToolItem icon="icon-circle" />
-                  </Flmr24>
-                  <Flmr24>
-                    <ToolItem icon="icon-text" />
-                  </Flmr24>
-                  <Flmr24>
-                    <ToolItem icon="icon-clear" />
-                  </Flmr24>
+                  </ToolItemWrapper>
+                  <ToolItemWrapper>
+                    <ToolIconItem icon="icon-point" />
+                  </ToolItemWrapper>
+                  <ToolItemWrapper>
+                    <ToolIconItem icon="icon-line" />
+                  </ToolItemWrapper>
+                  <ToolItemWrapper>
+                    <ToolIconItem icon="icon-Straightarrow" />
+                  </ToolItemWrapper>
+                  <ToolItemWrapper>
+                    <ToolIconItem icon="icon-rectangle" />
+                  </ToolItemWrapper>
+                  <ToolItemWrapper>
+                    <ToolIconItem icon="icon-polygon" />
+                  </ToolItemWrapper>
+                  <ToolItemWrapper>
+                    <ToolIconItem icon="icon-circle" />
+                  </ToolItemWrapper>
+                  <ToolItemWrapper>
+                    <ToolIconItem icon="icon-text" />
+                  </ToolItemWrapper>
+                  <ToolItemWrapper>
+                    <ToolIconItem icon="icon-clear" />
+                  </ToolItemWrapper>
                 </div>
               </Dragger>
             </div>

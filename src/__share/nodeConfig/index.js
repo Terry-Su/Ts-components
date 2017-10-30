@@ -8,6 +8,11 @@ module.exports = {
         decache(webpackPath)
         return require(webpackPath)
     },
+    getVueWebpackConfig() {
+        const webpackPath = PATH.resolve(__dirname, '../webpackConfig/webpack.vue.config')
+        decache(webpackPath)
+        return require(webpackPath)
+    },
     getWebpackConfigByDirname(dirname) {
         const webpackPath = PATH.resolve(dirname, './webpack.config.js')
         decache(webpackPath)
