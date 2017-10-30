@@ -2,20 +2,20 @@
     <div
         :style="style"
     >
-        Box
+        Dragging Element
             </div>
 </template>
 
     <script>
 export default {
-  name: "TestChild",
+  name: "DraggingThickElement",
   data() {
     return {
       style: {
         width: "1000px",
-        height: "320px",
+        height: "500px",
         color: "blue",
-        background: "rgba(4,3,5,0.5)"
+        background: "rgba(255,106,0,0.5)"
       }
     };
   }

@@ -1,12 +1,12 @@
 <template>
     <div :style="style">
-        <slot></slot>            
+      <slot></slot>
     </div>
 </template>
 
     <script>
 export default {
-  name: "TestParentRestrictor",
+  name: "DraggingContainer",
   data() {
     return {
       style: {
@@ -20,4 +20,6 @@ export default {
 };
 </script>
 
-<style></style>
+    <style>
+
+</style>

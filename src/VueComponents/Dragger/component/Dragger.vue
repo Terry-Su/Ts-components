@@ -4,7 +4,12 @@ import * as Util from "../util/index";
 
 export default {
   name: "App",
-  props: ["getRestrictElement", "shouldRestrictParentElement"],
+  props: [
+    "getRestrictElement",
+    "shouldRestrictParentElement",
+    "disableDragWhenDraggingElementInside",
+    "disableDragWhenDraggingElementInside"
+  ],
   data() {
     return {
       x: null,
@@ -80,7 +85,7 @@ export default {
         onTouchstart={this.onDragStart}
         style={this.style}
       >
-        { this.$slots.default }
+        {this.$slots.default}
       </div>
     );
   }

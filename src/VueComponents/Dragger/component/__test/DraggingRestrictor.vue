@@ -6,12 +6,12 @@
 
     <script>
 export default {
-  name: "TestParent",
+  name: "DraggingContainer",
   data() {
     return {
       style: {
         position: "relative",
-        background: "grey",
+        background: "black",
         width: "300px",
         height: "300px"
       }
