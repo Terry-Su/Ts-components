@@ -29,6 +29,8 @@
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.7",
     "decache": "^4.2.0",
+    "jss": "^9.1.0",
+    "jss-preset-default": "^4.0.1",
     "node-sass": "^4.5.3",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
